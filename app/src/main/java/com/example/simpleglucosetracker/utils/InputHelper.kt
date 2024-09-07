@@ -1,11 +1,9 @@
-package com.example.simpleglucosetracker
+package com.example.simpleglucosetracker.utils
 
 import android.content.Context
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.ArrayAdapter
-import android.widget.EditText
 import android.widget.Spinner
+import com.example.simpleglucosetracker.R
 
 
 class InputHelper {
