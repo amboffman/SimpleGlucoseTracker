@@ -10,7 +10,7 @@ interface GlucoseReadingDao{
     @Insert
     fun insert(glucoseReading: GlucoseReading)
 
-    @Query("SELECT * FROM GlucoseReading ORDER BY timestamp DESC")
+    @Query("SELECT * FROM GlucoseReading ORDER BY timestamp ASC")
     fun getAll(): List<GlucoseReading>
 
     @Query("SELECT * FROM GlucoseReading ORDER BY timestamp DESC LIMIT 15")
