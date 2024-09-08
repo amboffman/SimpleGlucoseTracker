@@ -4,14 +4,13 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.simpleglucosetracker.model.GlucoseReading
-import java.util.Date
 
 @Dao
 interface GlucoseReadingDao{
     @Insert
     fun insert(glucoseReading: GlucoseReading)
 
-    @Query("SELECT * FROM GlucoseReading")
+    @Query("SELECT * FROM GlucoseReading ORDER BY timestamp DESC")
     fun getAll(): List<GlucoseReading>
 
     @Query("SELECT * FROM GlucoseReading ORDER BY timestamp DESC LIMIT 15")

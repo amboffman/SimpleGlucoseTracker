@@ -64,4 +64,17 @@
             android:hint="@string/input_glucose_value" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/viewDataButton"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="159dp"
+        android:backgroundTint="@color/black"
+        android:text="View Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitGlucoseLevel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

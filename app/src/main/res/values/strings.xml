@@ -3,6 +3,7 @@
     <string name="blood_glucose_level">Blood Glucose Level</string>
     <string name="submit">Submit</string>
     <string name="input_glucose_value">Input Glucose Value</string>
+    <string name="logged_readings">Logged Readings</string>
     <string-array name="glucose_units">
         <item>mg/dL</item>
         <item>mmol/L</item>

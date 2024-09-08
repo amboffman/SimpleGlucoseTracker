@@ -1,5 +1,6 @@
 package com.example.simpleglucosetracker
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editGlucoseValue: TextInputEditText
     private lateinit var glucoseUnitsDropdown: Spinner
     private lateinit var readingSubmissionButton: Button
+    private lateinit var viewDataLogButton: Button
     private lateinit var database: AppDatabase
     private lateinit var glucoseReadingDao: GlucoseReadingDao
 
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         editGlucoseValue = findViewById(R.id.glucoseValueInput)
         glucoseUnitsDropdown = findViewById(R.id.glucoseUnitsDropdown)
         readingSubmissionButton = findViewById(R.id.submitGlucoseLevel)
+        viewDataLogButton = findViewById(R.id.viewDataButton)
         database = DatabaseHelper.getDatabase(this)
         glucoseReadingDao = database.glucoseReadingDao()
 
@@ -67,6 +70,10 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        viewDataLogButton.setOnClickListener{
+            val intent = Intent(this, DataDisplayActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
